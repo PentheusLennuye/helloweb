@@ -1,0 +1,90 @@
+---
+## Site
+site_name: CC Automation 2.0 - NA Notes
+site_description: CC Automation 2.0 - NA Notes, Diagramming, Minutes
+site_url: https://pages.github.tools.sap/i520342/cc_automation_na/
+repo_name: "i520342/cc_automation_na"
+repo_url: https://github.tools.sap/i520342/cc_automation_na/
+
+## Navigation
+nav:
+  - Home: index.md
+  - Development Environment: development_environment.md
+  - Meeting Minutes: minutes/index.md
+  - Diagrams:
+    - L1 System Context: l1.md
+    - L2 Containers: l2.md
+  - Example Mermaid:
+    - C4:
+      - L1 System Context: examples/system_contexts.md
+      - L2 Containers: examples/containers.md
+    - Sequence Diagrams: examples/sequence_diagrams.md
+    - Class Diagrams: examples/class_diagrams.md
+
+## GCS CIO Standard Configuration
+theme:
+  icon:
+    logo: fontawesome/brands/dev
+    # Change the above Icon to suit your project, if desired
+
+# =============================================================================
+#   Ignore and do not change anything below this line, these are the standard
+#   settings that should be in place for our documentation
+# =============================================================================
+# Setting up the basic NAT docs theme
+    repo: fontawesome/brands/github
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - toc.follow
+    - toc.integrate
+    - navigation.tracking
+
+# ==================================================================================================================================
+# Setting up the basic plugins
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings
+
+extra:
+  version:
+    provider: mike
+
+
+# ==================================================================================================================================
+# Setting up the required markdown extensions
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.highlight
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
