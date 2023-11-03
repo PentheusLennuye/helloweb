@@ -1,12 +1,6 @@
 {
     "name": "Automation 2.0 NA",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "args": {
-            "ALPINE_VERSION": "3.17",
-            "VERSION": "1.20"
-        }
-    },
+    "image": "docker.cummings-online.local/dev_environments/helloweb_dev_environment:0.1.0",
     "forwardPorts": [8000],
     "remoteUser": "vscode",
     "customizations": {
