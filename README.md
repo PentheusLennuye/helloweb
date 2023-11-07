@@ -29,3 +29,12 @@ git add .
 git commit -m'<Message here>'
 git push
 ```
+
+## Additional notes
+
+```sh
+docker run -v .:/workspace gcr.io/kaniko-project/executor:latest \
+  --dockerfile /workspace/Dockerfile \
+  --destination "docker.cummings-online.local/services/helloweb:0.2.0" /
+  --context dir:///workspace/
+```
