@@ -25,7 +25,7 @@ func main() {
 func helloWebOut(rw http.ResponseWriter, r *http.Request) {
 	header := rw.Header()
 	header.Add("Content-Type", "text/html; charset=utf-8")
-	rw.Write([]byte("<html><body><p>Hello to almost everyone on the Web!</p></body></html>"))
+	rw.Write([]byte("<html><body><p>Hello you all on the Web!</p></body></html>"))
 }
 
 /*
